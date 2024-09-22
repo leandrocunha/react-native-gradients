@@ -5,14 +5,16 @@ import Svg, {
   Rect,
   Stop,
 } from 'react-native-svg';
-import {Color} from './types';
+import { Color } from './types';
 
-export const RadialGradient = ({ colorList, x, y, rx, ry }: {  colorList: Color[]; x: string; y: string; rx: string; ry: string}) => {
+export const RadialGradient = ({ colorList, x, y, rx, ry }: { colorList: Color[]; x: string; y: string; rx: string; ry: string }) => {
+  const uniqueId = React.useMemo(() => `grad-${Math.random().toString(32)}`, [])
+
   return (
     <Svg height="100%" width="100%">
       <Defs>
         <SVGRadialGradient
-          id="grad"
+          id={uniqueId}
           cx={x}
           cy={y}
           rx={rx}
@@ -29,7 +31,7 @@ export const RadialGradient = ({ colorList, x, y, rx, ry }: {  colorList: Color[
           ))}
         </SVGRadialGradient>
       </Defs>
-      <Rect x="0" y="0" width="100%" height="100%" fill="url(#grad)" />
+      <Rect x="0" y="0" width="100%" height="100%" fill={`url(#${uniqueId})`} />
     </Svg>
   );
 };
