@@ -1,8 +1,8 @@
 {
-  "name": "react-native-gradients",
-  "version": "2.1.1",
+  "name": "react-native-gradients-2",
+  "version": "1.0.0",
   "description": "A simple gradient library for React Native.",
-  "author": "Berkay Yildiz",
+  "author": "Leandro Cunha",
   "license": "MIT",
   "keywords": [
     "react-component",
@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/FriendsOfReact/react-native-gradients"
+    "url": "git+https://github.com/leandrocunha/react-native-gradients.git"
   },
   "types": "dist/typescript/index.d.ts",
   "main": "dist/commonjs/index.js",
