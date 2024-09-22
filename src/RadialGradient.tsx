@@ -7,8 +7,8 @@ import Svg, {
 } from 'react-native-svg';
 import { Color } from './types';
 
-export const RadialGradient = ({ colorList, x, y, rx, ry }: { colorList: Color[]; x: string; y: string; rx: string; ry: string }) => {
-  const uniqueId = React.useMemo(() => `grad-${Math.random().toString(32)}`, [])
+export const RadialGradient = ({ colorList, x, y, rx, ry, customId }: { colorList: Color[]; x: string; y: string; rx: string; ry: string, customId?: string }) => {
+  const uniqueId = customId || React.useMemo(() => `grad-${Math.random().toString(32)}`, [])
 
   return (
     <Svg height="100%" width="100%">
